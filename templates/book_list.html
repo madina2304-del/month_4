@@ -1,0 +1,12 @@
+<h1> Библиотека книг </h1>
+
+{%. for i in book_lst  %}
+<h2>Название книги - {{ i.title }}</h2>
+<p>Автор - {{ i author }}</p>
+<p>Цена - {{i.price }}</p>
+
+<a href="/book_list/{{ i.id}}/">
+    <button>Подробнее</button>
+</a>
+
+{% endfor %}
