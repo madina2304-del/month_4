@@ -1,0 +1,11 @@
+<h1>Список категорий</h1>
+
+{% for i in categories %}
+
+<h2>Категория - {{ i.name }}</h2>
+
+<a href="/shop/category/{{ i.id }}/">
+    Посмотреть товары
+</a>
+
+{% endfor %}
