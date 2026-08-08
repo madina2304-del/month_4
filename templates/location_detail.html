@@ -1,0 +1,31 @@
+<h1>{{ location.name }}</h1>
+
+<h2>Описание</h2>
+
+<p>{{ location.description }}</p>
+
+
+<h2>Лошади</h2>
+
+{% for horse in location.horses.all %}
+
+<p>Кличка лошади - {{ horse.name }}</p>
+
+{% endfor %}
+
+
+<h2>Комментарии</h2>
+
+{% for comment in location.comment_set.all %}
+
+<p>Автор - {{ comment.author }}</p>
+
+<p>Комментарий - {{ comment.text }}</p>
+
+<hr>
+
+{% endfor %}
+
+<a href="{% url 'locations' %}">
+    Назад
+</a>

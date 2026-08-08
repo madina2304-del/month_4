@@ -1,0 +1,15 @@
+<h1>Локации конного тура</h1>
+
+{% for i in locations %}
+
+<h2>Название - {{ i.name }}</h2>
+
+<p>Описание - {{ i.description }}</p>
+
+<a href="{% url 'location_detail' i.id %}">
+    Подробнее
+</a>
+
+<hr>
+
+{% endfor %}
